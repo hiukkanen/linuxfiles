@@ -5,16 +5,9 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 alias dir='ls'
-alias gs='git status'
-alias gsd='git svn dcommit'
-alias gsr='git svn rebase'
-alias gcv='git commit --verbose'
-alias gd='git diff'
-alias tpj='tp -j'
-alias e=exit
-alias findfile='find . -iname'
 
 export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_EDITOR=vim
 
 #change the prompt
 function setPrompt {
@@ -28,7 +21,6 @@ function setPrompt {
 }
 setPrompt
 
-source ~/linuxfiles/tp_command
 source ~/linuxfiles/mvn-color-function.sh
 
 # enable programmable completion features (you don't need to enable
@@ -38,14 +30,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 export TERM=xterm-256color
-#change locale to sv_FI.utf8
-export LC_ALL="en_US.utf8"
 #ignore same inputs in history
 export HISTIGNORE="&"
-#add my dir of handy scripts to path
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-PATH=$PATH:~/scripts
-export PATH
 
 # some silly row for RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
