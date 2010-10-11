@@ -31,8 +31,12 @@ export TERM=xterm-256color
 #ignore same inputs in history
 export HISTIGNORE="&"
 
-# some silly row for RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
 alias rirssi="screen -rd irssi"
 alias startirssi="screen -S irssi irssi"
+
+# source the right rvm function creation script based on rvm being installed system-wide or user-wide
+if [[ -s /usr/local/lib/rvm ]]; then
+    && source /usr/local/lib/rvm
+else if [[ -s /usr/local/lib/rvm ]]; then
+    source /usr/local/lib/rvm
+fi
