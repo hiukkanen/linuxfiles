@@ -3,7 +3,6 @@ let Tlist_WinWidth = 40
 let Tlist_Sort_Type = "name"
 let g:tex_flavor = "latex"
 
-set directory=~/vimswaps
 set grepprg=grep\ -nH\ $*\ /dev/null
 set guifont=Andale\ Mono\ 12
 set guioptions-=T
