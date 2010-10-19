@@ -40,3 +40,6 @@ if [[ -s /usr/local/lib/rvm ]]; then
 elif [[ -s $HOME/.rvm/scripts/rvm ]]; then
     source $HOME/.rvm/scripts/rvm
 fi
+
+alias rirssi="screen -rd irssi"
+alias startirssi="screen -S irssi irssi"
