@@ -33,3 +33,6 @@ export HISTIGNORE="&"
 
 # some silly row for RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+alias rirssi="screen -rd irssi"
+alias startirssi="screen -S irssi irssi"
