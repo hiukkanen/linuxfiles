@@ -11,13 +11,11 @@ export GIT_EDITOR=vim
 
 #change the prompt
 function setPrompt {
-    #local GREEN_FG="\[\033[32m\]"
-    #local DEFAULT_FG="\033[39m\]"
     local GREEN_FG="$(tput setaf 2)"
     local DEFAULT_FG="$(tput sgr0)"
     local BLUE_FG="$(tput setaf 4)"
     local YELLOW_FG="$(tput setaf 3)"
-    PS1="${BLUE_FG}\w\n${DEFAULT_FG}[${GREEN_FG}\u${DEFAULT_FG}@${GREEN_FG}\h${DEFAULT_FG}${YELLOW_FG}\$(__git_ps1)${DEFAULT_FG}]\n> "
+    PS1="${GREEN_FG}\w\n${DEFAULT_FG}[${GREEN_FG}\u${DEFAULT_FG}@${GREEN_FG}\h${DEFAULT_FG}${YELLOW_FG}\$(__git_ps1)${DEFAULT_FG}]\n> "
 }
 setPrompt
 
